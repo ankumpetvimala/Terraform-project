@@ -42,21 +42,21 @@ AWS EC2 Deployment with Terraform This guide outlines the steps to deploy an EC2
   
 ### 5.Create Directory and Files:
 
-mkdir ec2
+  mkdir ec2
 
-cd ec2
+  cd ec2
 
 ### 6.Write Terraform Configuration: Populate the .tf files with the appropriate Terraform configuration.
 
-vi ec2_dep.tf variables.tf
+  vi ec2_dep.tf variables.tf
 
-vi app1_dev.tfvars
+  vi app1_dev.tfvars
 
-vi app1_uat.tfvars
+  vi app1_uat.tfvars
 
-vi backend.tf
+  vi backend.tf
 
-### 7.Create S3 Bucket: Use the AWS Management Console to create an S3 bucket with globally unique name.
+**7.Create S3 Bucket:** Use the AWS Management Console to create an S3 bucket with globally unique name.
 
 
 ### 8.Apply Terraform Configuration:
@@ -69,7 +69,7 @@ vi backend.tf
 
 **10.Destroy Resources:**
 
-    terraform destroy -var-file=app1_dev.tfvars
+      terraform destroy -var-file=app1_dev.tfvars
     
     
 **11.Repeat for UAT Environment:** Modify the .tfvars file accordingly for UAT environment Repeat steps 8 with app1_uat.tfvars.
